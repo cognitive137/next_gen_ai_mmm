@@ -7,43 +7,57 @@ from models.transformations import apply_hill_saturation
 
 st.set_page_config(page_title="Next-Gen AI MMM Framework", layout="wide")
 st.title("📊 Next-Gen Open Source MMM Framework for Conversational AI Ads")
-st.caption("IEOR Mathematical Allocation Engine Mapping Platform Cannibalization Drivers")
 
-# Initialize Tabs
+# Broad, clear explanation directly beneath the title
+st.markdown("""
+### The Strategic Challenge
+For decades, digital advertising relied on an unwritten rule: a user searches, clicks a sponsored link, and a conversion is tracked. Today, **Google's AI Overviews and AI Mode are transforming user behavior from clicking links to consuming direct on-page answers.** 
+
+When users get their answers upfront from an AI summary, they stop clicking traditional sponsored blue links. This causes a major problem: **the platform's new feature is cannibalizing its own high-margin ad revenue.** 
+
+Firms cannot simply turn off AI search without losing market share to competitors. This open-source framework uses advanced optimization theory (SLSQP) and Marketing Mix Modeling (MMM) to find the exact mathematical sweet spot. It calculates how to distribute your marketing wallet across traditional and AI ad spaces to maximize total revenue while accounting for this cannibalization effect.
+""")
+st.markdown("---")
+
+# User-Friendly Sidebar Controls
+st.sidebar.header("💼 Budget & Platform Controls")
+total_budget = st.sidebar.slider("Total Daily Ad Budget ($)", 500, 5000, 2500, step=100)
+gamma = st.sidebar.slider("AI Ads Cannibalization Rate (How aggressively AI answers steal your link traffic)", 0.0, 0.50, 0.25, step=0.01)
+
+st.sidebar.subheader("📈 Max Revenue Potential per Channel")
+beta_trad = st.sidebar.slider("Traditional Blue Links (Max Revenue Power)", 500, 2000, 1200, step=50)
+beta_ai = st.sidebar.slider("AI Overview Citations (Max Revenue Power)", 100, 1000, 500, step=50)
+
+st.sidebar.subheader("🎯 Diminishing Returns Configuration")
+alpha = st.sidebar.slider("Diminishing Returns Speed (How fast adding more budget flatlines performance)", 0.5, 3.0, 1.2, step=0.1)
+kappa = st.sidebar.slider("Channel Saturation Point (Budget level where ad efficiency drops by 50%)", 100, 2000, 500, step=50)
+
+# Execute Engine
+df = generate_synthetic_data()
+opt_s, opt_a, max_rev = optimize_budget(total_budget, beta_trad, beta_ai, gamma, alpha, kappa)
+
+# Compute Effectiveness Percentages
+eff_trad_pct = apply_hill_saturation(opt_s, alpha, kappa) * 100
+eff_ai_pct = apply_hill_saturation(opt_a, alpha, kappa) * 100
+
+# Initialize Interface Tabs
 tab1, tab2 = st.tabs(["🚀 Live Optimization Engine", "📄 Strategic Case Study Blueprint"])
 
 with tab1:
-    st.sidebar.header("Model Parameters")
-    total_budget = st.sidebar.slider("Total Available Daily Capital ($)", 500, 5000, 2500, step=100)
-    gamma = st.sidebar.slider("Stochastic Cannibalization Modifier (γ)", 0.0, 0.50, 0.25, step=0.01)
-
-    st.sidebar.subheader("Channel Response Weights")
-    beta_trad = st.sidebar.slider("Traditional Link Weight (β1)", 500, 2000, 1200, step=50)
-    beta_ai = st.sidebar.slider("AI Chat Citation Weight (β2)", 100, 1000, 500, step=50)
-
-    st.sidebar.subheader("Saturation Curves")
-    alpha = st.sidebar.slider("Hill Curve Alpha (α)", 0.5, 3.0, 1.2, step=0.1)
-    kappa = st.sidebar.slider("Half-Max Parameter (K)", 100, 2000, 500, step=50)
-
-    df = generate_synthetic_data()
-    opt_s, opt_a, max_rev = optimize_budget(total_budget, beta_trad, beta_ai, gamma, alpha, kappa)
-
-    eff_trad_pct = apply_hill_saturation(opt_s, alpha, kappa) * 100
-    eff_ai_pct = apply_hill_saturation(opt_a, alpha, kappa) * 100
-
     c1, c2, c3 = st.columns(3)
     with c1:
         st.metric(label="Optimal Traditional Link Spend", value=f"${opt_s:,.2f}")
-        st.caption(f"Capacity Utilization Reached: **{eff_trad_pct:.1f}%**")
+        st.caption(f"Channel Effectiveness (Capacity Used): **{eff_trad_pct:.1f}%**")
     with c2:
         st.metric(label="Optimal AI Overview Spend", value=f"${opt_a:,.2f}")
-        st.caption(f"Capacity Utilization Reached: **{eff_ai_pct:.1f}%**")
+        st.caption(f"Channel Effectiveness (Capacity Used): **{eff_ai_pct:.1f}%**")
     with c3:
-        st.metric(label="Maximized Revenue Outcome", value=f"${max_rev:,.2f}")
-        st.caption(f"Implied Portfolio ROAS: **{(max_rev/total_budget):.2f}x**")
+        st.metric(label="Maximized Total Projected Revenue", value=f"${max_rev:,.2f}")
+        st.caption(f"Implied Portfolio Return (ROAS): **{(max_rev/total_budget):.2f}x**")
 
     st.markdown("---")
-    st.subheader("Historical Timeline Model Verification Matrix")
+    st.subheader("Historical 3-Year Model Validation Timeline")
+    st.caption("Notice the structural break at Day 700 when AI Overviews are introduced, causing traditional search revenues to decay while AI spend climbs.")
     st.line_chart(df.set_index('date')[['revenue', 'traditional_search_spend', 'ai_overview_spend']])
 
 with tab2:
