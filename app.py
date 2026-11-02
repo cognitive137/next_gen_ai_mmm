@@ -21,9 +21,9 @@ st.sidebar.markdown("---")
 df = generate_synthetic_data()
 
 # ==============================================================================
-# WORKSPACE WORKFLOW 1: LIVE OPTIMIZATION ENGINE
+# WORKSPACE WORKFLOW 1: OPTIMIZATION ENGINE
 # ==============================================================================
-if app_mode == "🚀 Live Optimization Engine":
+if app_mode == "🚀 Optimization Engine":
     st.title("📊 Next-Gen Open Source MMM Framework for Conversational AI Ads")
     
     st.markdown("""
@@ -77,11 +77,11 @@ if app_mode == "🚀 Live Optimization Engine":
 # WORKSPACE WORKFLOW 2: STRATEGIC WHITEPAPER & CASE STUDY
 # ==============================================================================
 else:
-    st.title("📄 Strategic Whitepaper: Monetizing the Conversational AI Shift")
-    st.caption("Author: Sana Habeeb | Columbia IEOR Framework Integration Strategy")
+    st.title("📄  Monetizing the Conversational AI Shift")
+    st.caption("Author: Sana Habeeb")
     st.markdown("---")
     
-    st.header("Executive Summary")
+    st.header("Summary")
     st.markdown("""
     The transition of digital surfaces toward frontier generative AI models has broken traditional click-through performance marketing frameworks. As documented in public market shifts, search ad growth systematically slows down when users shift toward zero-click environments. 
     This paper introduces the macro-econometric and optimization logic behind the `Conv-MMM` project, detailing exactly what structural risk we are solving, how non-linear curves isolate marginal decay, and the ultimate evolutionary pivot of ad monetization.
@@ -96,7 +96,7 @@ else:
     Because the user consumes the solution without leaving the portal, traditional blue-link inventories face structural traffic decay. If a company continues to blindly throw money at traditional search, they run into massive, unseen overhead and flatlining conversions. This framework calculates how to identify that structural break and optimally pivot capital distribution to protect macro returns.
     """)
 
-    st.subheader("2. Deep Technical Breakdown of the Applied Mathematics")
+    st.subheader("2.Technical Breakdow")
     st.markdown("""
     #### The Strategic Objective of the Mathematics
     Before diving into individual adjustments, it is vital to establish what we are using the mathematics for. Because privacy frameworks have permanently hidden individual click-level user cookies, we cannot track human actions line-by-line. Instead, **we are using macro-econometric time-series data to treat corporate marketing budgets like an investment portfolio optimization asset.** 
@@ -115,7 +115,7 @@ else:
     Because the resulting formula is highly non-linear and bound by real-world constraints (e.g., your combined spend cannot exceed your daily corporate budget, and you cannot spend negative money), we deploy the Sequential Least Squares Programming (SLSQP) algorithm. The engine maps the slope of the revenue curve and rolls capital toward its highest mathematical efficiency, locating the absolute peak return on investment.
     """)
 
-    st.subheader("3. Historical Precedents of Successful Strategic Disruption")
+    st.subheader("3. Historic Comparables of this Strategic")
     st.markdown("""
     Strategic product cannibalization is not unique to generative AI; it is a fundamental pattern in technology management. Firms that survive structural platform breaks choose to weaponize their new disruption rather than desperately trying to protect a dying cash cow:
     
@@ -124,7 +124,7 @@ else:
 *   Adobe (Upfront Perpetual Licenses vs. Continuous SaaS Cloud Models): Adobe historically generated large upfront injections of capital by selling boxed software suites (like Photoshop) for over $1,000. In 2013, they radically shifted to the Creative Cloud monthly subscription model. This move intentionally cut off their largest short-term revenue source and caused panic on Wall Street. However, by lowering the cost barrier to entry, Adobe vastly expanded their total active user base, trading short-term margin deficits for highly predictable, compounding recurring customer lifetime value.
 *   The Modern Google Ads Evolution (Legacy Search Clicks vs. Conversational AI Modalities): Google currently finds itself navigating this exact historical blueprint. Traditional text-based search queries with high-margin cost-per-click values are being organically cannibalized by conversational summaries. Just as Apple sacrificed the iPod and Netflix shifted away from mail, the modern search engine must aggressively scale native conversational ad units. They must use portfolio optimization models to capture the user session at the new conversational source rather than attempting to force traffic backward into legacy web page links.
 """)
-st.subheader("4. Conclusion: Moving from $0.50 Cost-Per-Click to 3-5% Transaction Commissions")
+st.subheader("4. Conclusion: Moving from Cost-Per-Click to Transaction Commissions")
 st.markdown("""
 The transition toward Conversational Search and Autonomous AI Shopping Agents marks the death of the legacy Cost-Per-Click (CPC) monetization framework. When bots or AI systems execute the mundane parts of product search on behalf of humans, charging a merchant 50 cents for an arbitrary link impression becomes irrelevant.
 The Strategic Evolution: Google and major search engines must pivot from charging for intent traffic generation to charging for direct transaction fulfillment (Cost-Per-Acquisition / CPA).
