@@ -88,16 +88,16 @@ The 3-Year Model Validation Timeline below visualizes this exact structural mark
     st.subheader("Simulated 3-Year Platform Migration Model")
     st.caption("Visual representation of historical traditional search spend decaying over a 1,095 day landscape while generative conversational layers capture the market share.")
     # Create a 14-day rolling window to smooth out the jagged daily random noise
-df_smoothed = df.copy()
-metrics_to_smooth = ['revenue', 'traditional_search_spend', 'ai_overview_spend']
-df_smoothed[metrics_to_smooth] = df_smoothed[metrics_to_smooth].rolling(window=14, min_periods=1).mean()
+    df_smoothed = df.copy()
+    metrics_to_smooth = ['revenue', 'traditional_search_spend', 'ai_overview_spend']
+    df_smoothed[metrics_to_smooth] = df_smoothed[metrics_to_smooth].rolling(window=14, min_periods=1).mean()
 
-# Render the professional macro trend line graph
-st.line_chart(df_smoothed.set_index('date')[metrics_to_smooth])
+    # Render the professional macro trend line graph
+    st.line_chart(df_smoothed.set_index('date')[metrics_to_smooth])
 
-# ==============================================================================
-# WORKSPACE WORKFLOW 2: STRATEGIC WHITEPAPER & CASE STUDY
-# ==============================================================================
+    # ==============================================================================
+    # WORKSPACE WORKFLOW 2: STRATEGIC WHITEPAPER & CASE STUDY
+    # ==============================================================================
 else:
     st.title("📄  Monetizing the Conversational AI Shift")
     st.caption("Author: Sana Habeeb")
