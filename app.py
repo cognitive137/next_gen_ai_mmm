@@ -138,3 +138,7 @@ else:
     The transition toward Conversational Search and Autonomous AI Shopping Agents marks the death of the legacy **Cost-Per-Click (CPC)** monetization framework. When bots or AI systems execute the mundane parts of product search on behalf of humans, charging a merchant 50 cents for an arbitrary link impression becomes irrelevant.
     
     **The Strategic Evolution:** Google and major search engines must pivot from charging for *intent traffic generation* to charging for **direct transaction fulfillment (Cost-Per-Acquisition / CPA)**. 
+
+    Instead of collecting small fractional click fees, the new model transforms the platform into an end-to-end transaction hub. When an AI summary interface directly handles flight bookings, grocery ordering, or service scheduling natively inside the conversation interface, the platform takes an integrated 3% to 5% commission cut of the actual verified purchase total.
+By scaling transaction cut monetization, the platform converts what was a low-margin text summary into an incredibly high-value, friction-free commerce machine. This shift dramatically elevates customer lifetime value metrics and generates much higher revenue yields than legacy web page blue links could ever support.
+""")
