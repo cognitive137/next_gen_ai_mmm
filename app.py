@@ -8,7 +8,7 @@ from models.transformations import apply_hill_saturation
 st.set_page_config(page_title="Next-Gen AI MMM Framework", layout="wide")
 
 # ==============================================================================
-# APPLICATION NAVIGATION SURFACES
+# SIDEBAR APPLICATION NAVIGATION
 # ==============================================================================
 st.sidebar.markdown("# 🧭 Application Navigation")
 app_mode = st.sidebar.radio(
@@ -27,55 +27,61 @@ if app_mode == "🚀 Live Optimization Engine":
     st.title("📊 Next-Gen Open Source MMM Framework for Conversational AI Ads")
     
     st.markdown("""
-    ### Executive Overview
-    For decades, digital advertising relied on an unwritten rule: a user searches, clicks a sponsored link, and a conversion is tracked. Today, **Google's AI Overviews and AI Mode are transforming user behavior from clicking links to consuming direct on-page answers.** 
-
-    When users get answers upfront from an AI summary, they stop clicking traditional sponsored blue links. This causes a major problem: **the platform's new feature is cannibalizing its own high-margin ad revenue.** This open-source framework uses advanced optimization theory (SLSQP) and Marketing Mix Modeling (MMM) to locate the exact portfolio sweet spot that maximizes returns under cannibalization vectors.
+    ### The Strategic Paradigm Shift
+    This predictive engine models the massive customer migration away from legacy search web pages into generative chat layers. 
+    
+    **Watch the Crossover Effect:** As you increase your **Daily Budget** or boost the **Post-Exposure Interaction Depth Metric**, you will watch the mathematical optimizer actively pull capital *out* of traditional links and aggressively fund conversational AI ads. The model proves that once AI interfaces capture deep consumer engagement, traditional links wither away, and AI advertising becomes your dominant financial engine.
     """)
     st.markdown("---")
 
+    # User-Friendly Strategic Sidebar Controls
     st.sidebar.header("💼 Budget & Platform Controls")
-    total_budget = st.sidebar.slider("Total Daily Ad Budget ($)", 500, 5000, 2500, step=100)
-    gamma = st.sidebar.slider("AI Ads Cannibalization Rate (How aggressively AI answers steal your link traffic)", 0.0, 0.50, 0.25, step=0.01)
+    total_budget = st.sidebar.slider("Total Available Daily Budget ($)", 500, 5000, 2500, step=100)
+    gamma = st.sidebar.slider("User Behavioral Migration Rate (Speed at which users drop links for AI)", 0.0, 1.0, 0.40, step=0.05)
 
-    st.sidebar.subheader("📈 Max Revenue Potential per Channel")
-    beta_trad = st.sidebar.slider("Traditional Blue Links (Max Revenue Power)", 500, 2000, 1200, step=50)
-    beta_ai = st.sidebar.slider("AI Overview Citations (Max Revenue Power)", 100, 1000, 500, step=50)
+    st.sidebar.subheader("🎯 Post-Exposure Ad Tracking")
+    post_exposure_eff = st.sidebar.slider("AI Ad Interaction Depth Index (Post-display click, read, and conversion effectiveness)", 10, 200, 100, step=10, format="%d%%")
 
-    st.sidebar.subheader("🎯 Diminishing Returns Configuration")
-    alpha = st.sidebar.slider("Diminishing Returns Speed (How fast adding more budget flatlines performance)", 0.5, 3.0, 1.2, step=0.1)
-    kappa = st.sidebar.slider("Channel Saturation Point (Budget level where ad efficiency drops by 50%)", 100, 2000, 500, step=50)
+    st.sidebar.subheader("📈 Base Channel Value Weights")
+    base_beta_trad = st.sidebar.slider("Traditional Blue Links (Baseline Earning Power)", 100, 2000, 1000, step=50)
+    base_beta_ai = st.sidebar.slider("AI Overview Citations (Baseline Earning Power)", 100, 1000, 300, step=50)
 
-    opt_s, opt_a, max_rev = optimize_budget(total_budget, beta_trad, beta_ai, gamma, alpha, kappa)
+    st.sidebar.subheader("📊 Saturation Curvature")
+    alpha = st.sidebar.slider("Diminishing Returns Speed Curve (α)", 0.5, 3.0, 1.2, step=0.1)
+    kappa = st.sidebar.slider("Channel Saturation Threshold Cost (K)", 100, 2000, 500, step=50)
 
-    eff_trad_pct = apply_hill_saturation(opt_s, alpha, kappa) * 100
-    eff_ai_pct = apply_hill_saturation(opt_a, alpha, kappa) * 100
+    # Compute Upgraded Optimization Routine
+    opt_s, opt_a, max_rev = optimize_budget(total_budget, base_beta_trad, base_beta_ai, gamma, alpha, kappa, post_exposure_eff)
 
+    eff_trad_pct = apply_hill_saturation(np.array([opt_s]), alpha, kappa)[0] * 100
+    eff_ai_pct = apply_hill_saturation(np.array([opt_a]), alpha, kappa)[0] * 100
+
+    # Output Metrics Display
     c1, c2, c3 = st.columns(3)
     with c1:
         st.metric(label="Optimal Traditional Link Spend", value=f"${opt_s:,.2f}")
-        st.caption(f"Channel Effectiveness (Capacity Used): **{eff_trad_pct:.1f}%**")
+        st.caption(f"Link Saturation Capacity Exhausted: **{eff_trad_pct:.1f}%**")
     with c2:
         st.metric(label="Optimal AI Overview Spend", value=f"${opt_a:,.2f}")
-        st.caption(f"Channel Effectiveness (Capacity Used): **{eff_ai_pct:.1f}%**")
+        st.caption(f"AI Chat Saturation Capacity Exhausted: **{eff_ai_pct:.1f}%**")
     with c3:
-        st.metric(label="Maximized Total Projected Revenue", value=f"${max_rev:,.2f}")
-        st.caption(f"Implied Portfolio Return (ROAS): **{(max_rev/total_budget):.2f}x**")
+        st.metric(label="Maximized Total Portfolio Revenue", value=f"${max_rev:,.2f}")
+        st.caption(f"Implied Strategic Portfolio ROAS: **{(max_rev/total_budget):.2f}x**")
 
     st.markdown("---")
-    st.subheader("Historical 3-Year Model Validation Timeline")
-    st.caption("Notice the structural break at Day 700 when AI Overviews are introduced, causing traditional search revenues to decay while AI spend climbs.")
+    st.subheader("Simulated 3-Year Platform Migration Model")
+    st.caption("Visual representation of historical traditional search spend decaying over a 1,095 day landscape while generative conversational layers capture the market share.")
     st.line_chart(df.set_index('date')[['revenue', 'traditional_search_spend', 'ai_overview_spend']])
 
 # ==============================================================================
 # WORKSPACE WORKFLOW 2: STRATEGIC WHITEPAPER & CASE STUDY
 # ==============================================================================
 else:
-    st.title("📄 Monetizing the Conversational AI Shift")
-    st.caption("Author: Sana Habeeb")
+    st.title("📄 Strategic Whitepaper: Monetizing the Conversational AI Shift")
+    st.caption("Author: Sana Habeeb | Columbia IEOR Framework Integration Strategy")
     st.markdown("---")
     
-    st.header("Summary")
+    st.header("Executive Summary")
     st.markdown("""
     The transition of digital surfaces toward frontier generative AI models has broken traditional click-through performance marketing frameworks. As documented in public market shifts, search ad growth systematically slows down when users shift toward zero-click environments. 
     This paper introduces the macro-econometric and optimization logic behind the `Conv-MMM` project, detailing exactly what structural risk we are solving, how non-linear curves isolate marginal decay, and the ultimate evolutionary pivot of ad monetization.
@@ -90,7 +96,7 @@ else:
     Because the user consumes the solution without leaving the portal, traditional blue-link inventories face structural traffic decay. If a company continues to blindly throw money at traditional search, they run into massive, unseen overhead and flatlining conversions. This framework calculates how to identify that structural break and optimally pivot capital distribution to protect macro returns.
     """)
 
-    st.subheader("2.Technical Breakdown")
+    st.subheader("2. Deep Technical Breakdown of the Applied Mathematics")
     st.markdown("""
     #### The Strategic Objective of the Mathematics
     Before diving into individual adjustments, it is vital to establish what we are using the mathematics for. Because privacy frameworks have permanently hidden individual click-level user cookies, we cannot track human actions line-by-line. Instead, **we are using macro-econometric time-series data to treat corporate marketing budgets like an investment portfolio optimization asset.** 
@@ -109,7 +115,7 @@ else:
     Because the resulting formula is highly non-linear and bound by real-world constraints (e.g., your combined spend cannot exceed your daily corporate budget, and you cannot spend negative money), we deploy the Sequential Least Squares Programming (SLSQP) algorithm. The engine maps the slope of the revenue curve and rolls capital toward its highest mathematical efficiency, locating the absolute peak return on investment.
     """)
 
-    st.subheader("3. Historic Comparable Strategy")
+    st.subheader("3. Historical Precedents of Successful Strategic Disruption")
     st.markdown("""
     Strategic product cannibalization is not unique to generative AI; it is a fundamental pattern in technology management. Firms that survive structural platform breaks choose to weaponize their new disruption rather than desperately trying to protect a dying cash cow:
     
@@ -118,7 +124,7 @@ else:
 *   Adobe (Upfront Perpetual Licenses vs. Continuous SaaS Cloud Models): Adobe historically generated large upfront injections of capital by selling boxed software suites (like Photoshop) for over $1,000. In 2013, they radically shifted to the Creative Cloud monthly subscription model. This move intentionally cut off their largest short-term revenue source and caused panic on Wall Street. However, by lowering the cost barrier to entry, Adobe vastly expanded their total active user base, trading short-term margin deficits for highly predictable, compounding recurring customer lifetime value.
 *   The Modern Google Ads Evolution (Legacy Search Clicks vs. Conversational AI Modalities): Google currently finds itself navigating this exact historical blueprint. Traditional text-based search queries with high-margin cost-per-click values are being organically cannibalized by conversational summaries. Just as Apple sacrificed the iPod and Netflix shifted away from mail, the modern search engine must aggressively scale native conversational ad units. They must use portfolio optimization models to capture the user session at the new conversational source rather than attempting to force traffic backward into legacy web page links.
 """)
-st.subheader("4. Conclusion: Moving from Cost-Per-Click to Cost-Per-Acquisition")
+st.subheader("4. Conclusion: Moving from $0.50 Cost-Per-Click to 3-5% Transaction Commissions")
 st.markdown("""
 The transition toward Conversational Search and Autonomous AI Shopping Agents marks the death of the legacy Cost-Per-Click (CPC) monetization framework. When bots or AI systems execute the mundane parts of product search on behalf of humans, charging a merchant 50 cents for an arbitrary link impression becomes irrelevant.
 The Strategic Evolution: Google and major search engines must pivot from charging for intent traffic generation to charging for direct transaction fulfillment (Cost-Per-Acquisition / CPA).
