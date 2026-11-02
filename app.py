@@ -78,11 +78,11 @@ if app_mode == "🚀 Live Optimization Engine":
 # WORKSPACE WORKFLOW 2: STRATEGIC WHITEPAPER & CASE STUDY
 # ==============================================================================
 else:
-    st.title("📄 Strategic Whitepaper: Monetizing the Conversational AI Shift")
-    st.caption("Author: Columbia IEOR Graduate Framework Integration Strategy")
+    st.title("📄 Monetizing the Conversational AI Shift")
+    st.caption("Author: Sana Habeeb")
     st.markdown("---")
     
-    st.header("Executive Summary")
+    st.header("Summary")
     st.markdown("""
     The transition of digital surfaces toward frontier generative AI models has broken traditional click-through performance marketing frameworks. As documented in public market shifts, search ad growth systematically slows down when users shift toward zero-click environments. 
     This paper introduces the macro-econometric and optimization logic behind the `Conv-MMM` project, detailing exactly what structural risk we are solving, how non-linear curves isolate marginal decay, and the ultimate evolutionary pivot of ad monetization.
@@ -133,7 +133,7 @@ else:
         "Strategic Tactical Fix": ["Absorbed short-term overhead, scaled volume globally.", "Pivoted unit loss into premium high-tier ecosystem margins.", "Traded immediate upfront cash for recurring lifetime value.", "Injecting conversational native ads & monetization triggers."]
     }))
 
-    st.subheader("4. Conclusion: Moving from $\$0.50$ Cost-Per-Click to $3-5\%$ Transaction Commissions")
+    st.subheader("4. Conclusion: Moving from $0.50$ Cost-Per-Click to $3-5\%$ Transaction Commissions")
     st.markdown("""
     The transition toward Conversational Search and Autonomous AI Shopping Agents marks the death of the legacy **Cost-Per-Click (CPC)** monetization framework. When bots or AI systems execute the mundane parts of product search on behalf of humans, charging a merchant 50 cents for an arbitrary link impression becomes irrelevant.
     
