@@ -27,11 +27,27 @@ if app_mode == "🚀 Live Optimization Engine":
     st.title("📊 Next-Gen Open Source MMM Framework for Conversational AI Ads")
     
     st.markdown("""
-    ### The Strategic Paradigm Shift
-    This predictive engine models the massive customer migration away from legacy search web pages into generative chat layers. 
-    
-    **Watch the Crossover Effect:** As you increase your **Daily Budget** or boost the **Post-Exposure Interaction Depth Metric**, you will watch the mathematical optimizer actively pull capital *out* of traditional links and aggressively fund conversational AI ads. The model proves that once AI interfaces capture deep consumer engagement, traditional links wither away, and AI advertising becomes your dominant financial engine.
-    """)
+    ### 
+🌐 The Conversational Ad Landscape & Platform Shift
+
+Generative search entirely alters the performance marketing landscape. Instead of scattering user attention across competing browser tabs, AI platforms aggregate high-intent research into a unified interface. This shift forces a permanent consumer behavioral migration: legacy link-clicks dry up as session consumption moves natively to the generative chat surface. To prevent margin erosion as traditional inventory withers away, brands must pivot from defensive positioning to a forward-looking transition model.
+
+🎯 Our Recommended Strategic Directive
+
+• Shift from Visibility to Engagement: Cease treating digital inventory as flat link impressions (CPC) and instead re-optimize capital around deep conversational interaction loops and transaction commissions (CPA).
+• Maximize Inflection Yields: Deploy quantitative portfolio engines to actively pull capital out of decaying traditional channels the exact moment AI interaction depth metrics clear their saturation targets.
+• Capitalize on Autonomous Commerce: Position your marketing budget to fund interactive, agentic citations that capture, nurture, and fulfill customer intent directly within the chat ecosystem.
+
+🎛️ How to Interact with this Engine
+
+• Daily Budget & Behavioral Migration Rate: Controls your total capital ceiling and simulates the raw speed at which the general public drops traditional search links in favor of AI text overviews.
+• AI Ad Interaction Depth Index: Models post-exposure effectiveness. Increasing this slider simulates a highly engaging AI ad that holds attention, prompts follow-up questions, or triggers agentic buys.
+• Base Value Weights & Saturation Curves: Calibrates the raw baseline power of each channel and sets the budget threshold where adding an extra dollar hits a physical wall of diminishing marginal returns.
+
+📉 Interpreting the Verification Timeline Graph
+
+The 3-Year Model Validation Timeline below visualizes this exact structural marketplace break. Prior to the launch on Day 700, traditional search spend successfully commands the entire corporate budget portfolio. Post-introduction, the chart visually maps the permanent, irreversible revenue decay of legacy blue-links alongside the aggressive, exponential climb of conversational AI spend as it completely captures and dominates the modern consumer marketplace.
+""")
     st.markdown("---")
 
     # User-Friendly Strategic Sidebar Controls
