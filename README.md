@@ -38,32 +38,33 @@ next-gen-ai-mmm/
 
 ## 📐 Framework & Execution
 
-Instead of using outdated tracking cookies, this engine uses advanced data science and optimization theory to solve the cannibalization problem in four clear steps:
+Instead of using outdated tracking cookies or treating AI ads as a passive loss vector, this predictive engine models the structural shift of marketing budgets as consumer habits migrate toward conversational commerce. The code maps this migration in four clear steps:
 
-### Step 1: Decompose the Search Channel (The Variables)
-Standard data tools lump all Google advertising data into one single bucket. This framework explicitly splits search traffic into two distinct, competing variables:
+### Step 1: Decompose the Search Channel (The Dynamic Variables)
+Standard data tools lump all Google advertising data into a single bucket. This framework explicitly splits search traffic into two distinct, competing variables:
 *   **Traditional Search Spend ($S_t$):** The legacy, high-margin sponsored blue links that rely on user clicks.
-*   **AI Overview Spend ($A_t$):** The new, conversational ad spaces injected directly inside the AI's generated response summary.
+*   **AI Overview Spend ($A_t$):** The conversational ad spaces injected directly inside the AI's generated response summary.
 
 ### Step 2: Calculate the "Memory Effect" (Adstock Transformation)
 Advertising does not disappear instantly; its impact decays over time as people remember a brand. The code uses an infinite impulse response decay filter to transform raw daily dollar spend into **effective spend** over a rolling historical timeline:
 $$Adstock(x_t) = x_t + \theta \cdot Adstock(x_{t-1})$$
 *Where $\theta$ is the memory retention factor tracking how long an ad stays in a customer's head.*
 
-### Step 3: Map Diminishing Returns (Hill Saturation Curve)
-Pumping infinite money into an ad channel does not yield infinite returns. Every platform hits a saturation wall where spending an extra dollar gives you zero marginal revenue. The code maps effective spend through a non-linear Hill curve to calculate your exact **Capacity Utilization / Effectiveness Parameter**:
+### Step 3: Map Diminishing Returns & Post-Exposure Capacity (Hill Saturation)
+Pumping infinite money into an ad channel does not yield infinite returns. Every platform hits a saturation wall where spending an extra dollar gives you zero marginal revenue. The code maps effective spend through a non-linear Hill curve to calculate your exact **Channel Capacity Utilization Percentage**:
 $$Hill(x) = \frac{x^\alpha}{x^\alpha + K^\alpha}$$
 *Where $K$ is the inflection point where ad performance drops by exactly 50%, and $\alpha$ controls how aggressively the returns flatline.*
 
-### Step 4: Solve the Cannibalization Optimization Equation (SLSQP)
-This is the core IEOR engine. We create a strategic formula where traditional search revenue is multiplied by a **Stochastic Cannibalization Penalty ($\gamma$)** that scales up as AI Overview impressions scale up. The engine then uses calculus gradients via the Sequential Least Squares Programming (SLSQP) method to solve the equation:
+### Step 4: The Dynamic Crossover Portfolio Optimization Engine (SLSQP)
+This is the core IEOR engine. Instead of treating AI revenue as flat, our structural equations force **AI Earning Power to scale up exponentially** as spend increases, supercharged by an explicit **Post-Exposure Ad Interaction Depth Index** slider (tracking dwell time, follow-up questions, and agentic conversions). 
 
-$$\max_{S, A} \quad \text{Revenue} = \beta_1 \cdot Hill(S_t) \cdot \left[1.0 - \gamma \cdot Hill(A_t)\right] + \beta_2 \cdot Hill(A_t)$$
+Simultaneously, traditional blue-link revenue efficiency is mathematically designed to decay naturally as AI adoption grows. The engine uses Sequential Least Squares Programming (SLSQP) gradients to solve the portfolio matrix:
+
+$$\max_{S, A} \quad \text{Revenue} = \beta_{1,\text{dynamic}} \cdot Hill(S_t) + \beta_{2,\text{dynamic}} \cdot Hill(A_t)$$
 
 $$\text{Subject to the Boundary Constraint:} \quad S_t + A_t \le \text{Total Wallet Budget (B)}$$
 
-The optimizer searches every possible spend combination to locate the exact mathematical sweet spot that protects your baseline business margins under the platform shift.
-
+**The Crossover Solution:** By adjusting the sliders, the engine visualizes the precise tipping point where the code pulls capital entirely out of traditional search and floods it into conversational AI ads to maximize total enterprise revenue.
 ---
 
 ## 🏃 Local Setup Instructions
