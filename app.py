@@ -115,7 +115,7 @@ else:
     Because the resulting formula is highly non-linear and bound by real-world constraints (e.g., your combined spend cannot exceed your daily corporate budget, and you cannot spend negative money), we deploy the Sequential Least Squares Programming (SLSQP) algorithm. The engine maps the slope of the revenue curve and rolls capital toward its highest mathematical efficiency, locating the absolute peak return on investment.
     """)
 
-    st.subheader("3. Historic Comparables of this Strategic")
+    st.subheader("3. Historic Comparables of this Strategy")
     st.markdown("""
     Strategic product cannibalization is not unique to generative AI; it is a fundamental pattern in technology management. Firms that survive structural platform breaks choose to weaponize their new disruption rather than desperately trying to protect a dying cash cow:
     
