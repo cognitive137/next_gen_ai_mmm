@@ -23,7 +23,7 @@ df = generate_synthetic_data()
 # ==============================================================================
 # WORKSPACE WORKFLOW 1: OPTIMIZATION ENGINE
 # ==============================================================================
-if app_mode == "🚀 Optimization Engine":
+if app_mode == "🚀 Live Optimization Engine":
     st.title("📊 Next-Gen Open Source MMM Framework for Conversational AI Ads")
     
     st.markdown("""
