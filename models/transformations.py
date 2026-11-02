@@ -10,4 +10,7 @@ def apply_adstock(spend, theta):
 
 def apply_hill_saturation(adstocked_spend, alpha, kappa):
     """Non-linear Hill function mapping diminishing marginal returns."""
+    # Prevent division by zero errors
+    if kappa == 0:
+        return np.zeros_like(adstocked_spend)
     return (adstocked_spend ** alpha) / ((adstocked_spend ** alpha) + (kappa ** alpha))
