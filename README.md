@@ -4,7 +4,7 @@ An enterprise-grade, privacy-first Marketing Mix Modeling (MMM) engine optimized
 
 ---
 
-## 🎯 The Strategic Core: Business Context & Case Study
+## 🎯 Ads Core Business & Context
 
 ### 1. The Core Problem
 For twenty years, digital advertising relied entirely on click-level multi-touch attribution (MTA). A user typed a commercial query, clicked a sponsored destination URL, and a cookie tracked the sale. 
