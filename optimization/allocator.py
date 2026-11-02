@@ -6,18 +6,19 @@ def objective_function(spend_vector, beta_trad, beta_ai, gamma, alpha, kappa):
     s_spend, a_spend = spend_vector
     s_sat = apply_hill_saturation(np.array([s_spend]), alpha, kappa)
     a_sat = apply_hill_saturation(np.array([a_spend]), alpha, kappa)
-
+    
     revenue = (beta_trad * s_sat * (1.0 - gamma * a_sat)) + (beta_ai * a_sat)
     return -revenue
 
 def optimize_budget(total_budget, beta_trad, beta_ai, gamma, alpha, kappa):
     x0 = [total_budget / 2, total_budget / 2]
-    constraints = ({'type': 'ineq', 'fun': lambda x: total_budget - (x + x)})
+    constraints = ({'type': 'ineq', 'fun': lambda x: total_budget - (x[0] + x[1])})
     bounds = ((0, total_budget), (0, total_budget))
-
+    
     result = minimize(
         objective_function, x0, 
         args=(beta_trad, beta_ai, gamma, alpha, kappa), 
         method='SLSQP', bounds=bounds, constraints=constraints
     )
-    return result.x, result.x, -result.fun
+    # FIX: Return scalars using explicit array indices [0] and [1]
+    return float(result.x[0]), float(result.x[1]), float(-result.fun)
