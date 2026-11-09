@@ -1,6 +1,6 @@
 # Next-Gen Open Source MMM Framework for Conversational AI Ads
 
-An enterprise-grade, privacy-first Marketing Mix Modeling (MMM) engine optimized for modern generative search platforms. This framework leverages Columbia IEOR principles (optimization, econometrics, and stochastics) to quantify and safely mitigate internal product cannibalization caused by on-page conversational layers like Google AI Overviews.
+An enterprise-grade, privacy-first Marketing Mix Modeling (MMM) engine optimized for modern generative search platforms. This framework leverages IEOR principles (optimization, econometrics, and stochastics) to quantify and safely mitigate internal product cannibalization caused by on-page conversational layers like Google AI Overviews.
 
 ---
 
